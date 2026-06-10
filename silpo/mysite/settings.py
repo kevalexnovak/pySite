@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5h-@hm4=fat=zv(*grkps0nzv&o$0nonyip9%=0g792ar6)d!^'
+SECRET_KEY = 'django-insecure-&gojcft7&)n27xizsz!%8uf4v!3qy-q-$8q+afrz*_0i%pasd-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,7 +55,9 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,10 +75,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-#tohahop384@alf5.com
-#tohahop384@alf5.comQ
-#"Host=ep-lucky-math-aqxqctwq-pooler.c-8.us-east-1.aws.neon.tech; Database=neondb;
-#Username=neondb_owner; Password=npg_DC4MTx9uasbH; SSL Mode=VerifyFull; Channel Binding=Require;"
+#liheko6898@hitzcart.com
+#liheko6898@hitzcart.comQ
 DATABASES = {
     #'default': {
      #   'ENGINE': 'django.db.backends.sqlite3',
@@ -116,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uk-ua'
 
 TIME_ZONE = 'UTC'
 
@@ -131,3 +131,15 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+IMAGES_URL = '/images/'
+
+IMAGES_ROOT = BASE_DIR / 'images'
+
+DJANGORESIZED_DEFAULT_SIZE = [1920, 1080]
+DJANGORESIZED_DEFAULT_SCALE = 0.5
+DJANGORESIZED_DEFAULT_QUALITY = 85
+DJANGORESIZED_DEFAULT_KEEP_META = True
+DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'WEBP'
+DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'WEBP': ".webp"}
+DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
