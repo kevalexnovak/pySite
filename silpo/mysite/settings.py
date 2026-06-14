@@ -77,12 +77,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 #liheko6898@hitzcart.com
 #liheko6898@hitzcart.comQ
+# Під час розробки — листи виводяться в термінал
+
 DATABASES = {
     #'default': {
      #   'ENGINE': 'django.db.backends.sqlite3',
       #  'NAME': BASE_DIR / 'db.sqlite3',
     #}
     'default': {
+
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'ep-lucky-math-aqxqctwq-pooler.c-8.us-east-1.aws.neon.tech',
         'NAME': 'neondb',
@@ -143,3 +146,12 @@ DJANGORESIZED_DEFAULT_KEEP_META = True
 DJANGORESIZED_DEFAULT_FORCE_FORMAT = 'WEBP'
 DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'WEBP': ".webp"}
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ukr.net'
+EMAIL_PORT = 2525
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'ckifckyf@ukr.net'
+EMAIL_HOST_PASSWORD = 'pSXxkZ32j5DddCeI'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
